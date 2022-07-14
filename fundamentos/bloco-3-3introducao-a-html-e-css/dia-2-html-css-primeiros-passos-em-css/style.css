@@ -1,0 +1,30 @@
+body {
+    font-size: 16px;
+    font-style: oblique;
+    line-height: normal;
+    text-align: center;
+    text-decoration: underline;
+}
+h1 {
+    width: 65px;
+    color: orange;
+    font-family: sans-serif;
+    margin: 0 auto;
+    text-align: center;
+}
+.listaep {
+    background-color: tan;
+}
+#paragrafo1 {
+    font-weight: 600;
+    font-size: 3em;
+}
+#amarelo {
+    background-color: yellow;
+}
+#vermelho {
+    background-color: red;
+}
+#marrom{
+    background-color: brown;
+}
