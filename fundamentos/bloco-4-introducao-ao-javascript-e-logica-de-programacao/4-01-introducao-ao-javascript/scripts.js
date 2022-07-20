@@ -1,15 +1,11 @@
-let notatotal = 70;
+const a = 3;
 
-if (notatotal >= 90) {
-    console.log("A");
-} else if (notatotal >= 80) {
-    console.log("B");
-} else if (notatotal >= 70) {
-    console.log("C");
-} else if (notatotal >= 60) {
-    console.log("D");
-} else if (notatotal >= 50) {
-    console.log("E");
+const b = 1;
+
+const c = 1;
+
+if (a % 2 === 0 || b % 2 === 0 || c % 2 === 0) {
+    console.log(true)
 } else {
-    console.log("F");
+    console.log(false)
 }
