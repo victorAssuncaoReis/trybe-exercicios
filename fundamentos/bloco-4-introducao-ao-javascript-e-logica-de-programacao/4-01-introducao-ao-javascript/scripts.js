@@ -1,22 +1,15 @@
-let peca = "Bispo";
+let notatotal = 70;
 
-    switch (peca.toLowerCase()) {
-        case "torre":
-            console.log("Movimento vertical e horizontal ilimitado, desde que não seja bloqueado");
-            break;
-        case "rainha":
-            console.log("Movimento da torre e peão combinados");
-            break;
-        case "rei":
-                console.log("Quadrado");
-                break;
-        case "peão":
-            console.log("Forward");
-            break;
-        case "bispo":
-                console.log("Diagonal");
-                break;
-        case "cavaleiro":
-            console.log("Horizontal um movimento e dois para cima ou baixo");
-            break;
-    }
+if (notatotal >= 90) {
+    console.log("A");
+} else if (notatotal >= 80) {
+    console.log("B");
+} else if (notatotal >= 70) {
+    console.log("C");
+} else if (notatotal >= 60) {
+    console.log("D");
+} else if (notatotal >= 50) {
+    console.log("E");
+} else {
+    console.log("F");
+}
