@@ -1,12 +1,10 @@
-const base = 5;
+const notaDesafioPratico = 90;
 
-let height = 8;
-
-const area = base * height;
-
-console.log (area);
-
-const perimeter = base*2 + height*2;
-
-console.log (perimeter);
-
+if (notaDesafioPratico >= 80) {
+    console.log("Parabéns, você foi aprovado(a)!");
+} 
+else if (notaDesafioPratico >= 60) {
+    console.log("Você está na nossa lista de espera");
+} else {
+    console.log("Você foi reprovado(a)");
+}
