@@ -1,15 +1,29 @@
-let candidato = "Aprovada";
+const a = 10;
 
-switch (candidato) {
-    case "Aprovada":
-        console.log ("aprovada");
-        break;
-    case "lista":
-        console.log ("lista");
-        break;
-    case "Reprovada":
-        console.log ("reprovada");
-        break;
-    default:
-        console.log ("Não se aplica");
+const b = 20;
+
+    console.log(a + b);
+
+    console.log(a - b);
+
+    console.log (a * b)
+
+    console.log (a / b);
+
+    console.log (a % b)
+
+if (a > b) {
+    console.log (a);
+} else {
+    console.log (b);
+}
+
+const c = 30;
+
+if (a > b && a > c) {
+    console.log (a);
+} else if (b > a && b > c) {
+    console.log (b);
+} else {
+    console.log (c);
 }
