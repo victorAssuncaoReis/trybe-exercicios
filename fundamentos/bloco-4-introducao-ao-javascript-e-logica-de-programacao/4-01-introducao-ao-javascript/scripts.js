@@ -1,11 +1,13 @@
-const a = 20;
+const custoProduto = 100;
 
-const b = 20;
+const valorDeVenda = 300;
 
-const c = 18;
+const custoImposto = 120;
 
-if (a % 2 === 1 || b % 2 === 1 || c % 2 === 1) {
-    console.log(true)
+const lucro = valorDeVenda - custoImposto;
+
+if (lucro > 0) {
+    console.log(lucro * 1000)
 } else {
-    console.log(false)
+    console.log("Erro, valor menor do que 0")
 }
