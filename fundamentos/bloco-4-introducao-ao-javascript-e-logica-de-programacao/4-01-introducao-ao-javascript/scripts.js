@@ -1,10 +1,10 @@
-const a = 3;
+const a = 20;
 
-const b = 1;
+const b = 20;
 
-const c = 1;
+const c = 18;
 
-if (a % 2 === 0 || b % 2 === 0 || c % 2 === 0) {
+if (a % 2 === 1 || b % 2 === 1 || c % 2 === 1) {
     console.log(true)
 } else {
     console.log(false)
