@@ -1,29 +1,11 @@
-const a = 10;
+const a = 60;
+const b = 60;
+const c = 60;
 
-const b = 20;
-
-    console.log(a + b);
-
-    console.log(a - b);
-
-    console.log (a * b)
-
-    console.log (a / b);
-
-    console.log (a % b)
-
-if (a > b) {
-    console.log (a);
+if (a + b + c === 180) {
+    console.log (true);
+} else if (a + b + c < 180 || a + b + c > 180) {
+    console.log (false);
 } else {
-    console.log (b);
-}
-
-const c = 30;
-
-if (a > b && a > c) {
-    console.log (a);
-} else if (b > a && b > c) {
-    console.log (b);
-} else {
-    console.log (c);
+    console.log ("Error")
 }
