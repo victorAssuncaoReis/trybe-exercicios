@@ -1,11 +1,22 @@
-const a = 60;
-const b = 60;
-const c = 60;
+let peca = "Bispo";
 
-if (a + b + c === 180) {
-    console.log (true);
-} else if (a + b + c < 180 || a + b + c > 180) {
-    console.log (false);
-} else {
-    console.log ("Error")
-}
+    switch (peca.toLowerCase()) {
+        case "torre":
+            console.log("Movimento vertical e horizontal ilimitado, desde que não seja bloqueado");
+            break;
+        case "rainha":
+            console.log("Movimento da torre e peão combinados");
+            break;
+        case "rei":
+                console.log("Quadrado");
+                break;
+        case "peão":
+            console.log("Forward");
+            break;
+        case "bispo":
+                console.log("Diagonal");
+                break;
+        case "cavaleiro":
+            console.log("Horizontal um movimento e dois para cima ou baixo");
+            break;
+    }
