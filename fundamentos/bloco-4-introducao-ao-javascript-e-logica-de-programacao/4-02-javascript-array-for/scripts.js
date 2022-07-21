@@ -1,5 +1,7 @@
-let names = ['João', 'Maria', 'Antônio', 'Margarida'];
+let numbers = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
 
-for (let lista of names) {
-    console.log(lista);
+for (index = 0; index < numbers.length; index += 1) {
+    console.log(numbers[index]);
 }
+  
+
