@@ -10,4 +10,10 @@ for (let index = inicio; index < fim; index +=1) {
       }
 }
 
-console.log(arr)
+let arr2 =[];
+
+for (let index2 = 0; index2 < arr.length; index2 +=1) {
+    arr2.push(arr[index2] / 2);
+}
+
+console.log(arr2)
