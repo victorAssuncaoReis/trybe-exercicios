@@ -1,14 +1,13 @@
-let numbers = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
-let sum = 0;
-let lowest = numbers[0];
+let inicio = 1;
+let fim = 25;
 
-for (let index = 0; index < numbers.length; index +=1) {
-    sum += numbers[index];
-    if (lowest > numbers[index] ) {
-        lowest = numbers[index];
-    }
+let arr = [];
+
+for (let index = inicio; index < fim; index +=1) {
+
+    while(inicio <= fim){
+        arr.push(inicio++);
+      }
 }
 
-console.log(lowest)
-   
-
+console.log(arr)
