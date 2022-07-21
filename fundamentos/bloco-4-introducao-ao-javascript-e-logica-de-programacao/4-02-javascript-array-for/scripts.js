@@ -1,4 +1,5 @@
 let menu = ['Home', 'Serviços', 'Portfólio', 'Links'];
-let indexOfPortfolio = menu[2];
 
-console.log(indexOfPortfolio);
+menu.push("Contato")
+
+console.log(menu);
