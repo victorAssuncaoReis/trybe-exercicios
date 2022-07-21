@@ -1,13 +1,7 @@
-const custoProduto = 100;
+const salario = 3000;
 
-const valorDeVenda = 300;
+let porcentagemPraPegar = 11;
 
-const custoImposto = 120;
+let porcentagem = (porcentagemPraPegar/100) * salario;
 
-const lucro = valorDeVenda - custoImposto;
-
-if (lucro > 0) {
-    console.log(lucro * 1000)
-} else {
-    console.log("Erro, valor menor do que 0")
-}
+if (salario > )
