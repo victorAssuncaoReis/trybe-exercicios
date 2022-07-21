@@ -6,6 +6,12 @@ for (let index = 0; index < numbers.length; index +=1) {
 }
 console.log(sum/numbers.length);
 
+if (sum/numbers.length >= 20) {
+    console.log("Valor maior do que 20");
+} else {
+    console.log("Valor menor do que 20");
+}
+
 
   
 
