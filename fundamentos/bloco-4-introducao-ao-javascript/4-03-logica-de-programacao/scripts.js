@@ -1,7 +1,7 @@
-let array = ['java', 'javascript', 'python', 'html', 'css'];
+let n = 5;
 
-array.sort((a,b) => a.length - b.length);
+for (index = 0; index <= n; index += 1) {
+    console.log("*".repeat(n));
+}
 
-console.log(array[array.length - 1]);
 
-console.log(array[0]);
