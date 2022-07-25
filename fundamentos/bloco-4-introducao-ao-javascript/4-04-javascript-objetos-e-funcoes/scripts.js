@@ -1,16 +1,11 @@
-
-function nomes(array) {
-    let maiorNome = array[0];
-    for (let index in array) {
-        if (maiorNome.length < array[index].length) {
-            maiorNome = array[index];
-        }
-    }
-    return maiorNome;
+function soma(numeros) {
+    let total = 0;
+   for (index = 0; index <= numeros; index += 1) {
+    total = total + index;
+   }
+   return total;
 }
-    
-console.log(nomes(['José', 'Lucas', 'Nádia', 'Fernanda', 'Cairo', 'Joana']));
 
+console.log(soma(5));
 
-  
 
