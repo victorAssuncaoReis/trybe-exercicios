@@ -1,12 +1,16 @@
 
-function array(numeros) {
-    let indexMaior = 0;
-    for (let index in numeros) {
-        if (numeros[indexMaior] > numeros[index]) {
-            indexMaior = index;
-        } 
+function nomes(array) {
+    let maiorNome = array[0];
+    for (let index in array) {
+        if (maiorNome.length < array[index].length) {
+            maiorNome = array[index];
+        }
     }
-    return indexMaior;
+    return maiorNome;
 }
-console.log(array([2, 4, 6, 7, 10, 0, -3]));
+    
+console.log(nomes(['José', 'Lucas', 'Nádia', 'Fernanda', 'Cairo', 'Joana']));
+
+
+  
 
