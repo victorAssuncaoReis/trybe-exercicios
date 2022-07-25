@@ -1,9 +1,7 @@
-let car = {
-    model: 'A3 Sedan',
-    manufacturer: 'Audi',
-    year: 2020
+let info = {
+    personagem: 'Margarida',
+    origem: 'Pato Donald',
+    nota: 'Namorada do personagem principal nos quadrinhos do Pato Donald',
   };
 
-  for (let index in car) {
-    console.log(index, car[index]);
-  }
+  console.log("Bem vinda, " + info.personagem);
