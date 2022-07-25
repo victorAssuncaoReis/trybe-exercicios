@@ -7,7 +7,18 @@
 
   info['recorrente'] = "Sim";
 
+  let info2 = {
+    personagem: 'Tio Patinhas',
+    origem: "Christmas on Bear Mountain, Dell's Four Color Comics #178",
+    nota: 'O último MacPatinhas',
+    recorrente: "Sim",
+  };
+
   for (let chaves in info) {
-    console.log(info[chaves]);
-  }
-  
+   if (chaves === "recorrente" && info.recorrente === "Sim" && info2.recorrente === "Sim") {
+    console.log("Ambos recorrentes")
+   } else {
+    console.log(info[chaves] + " e " + info2[chaves]);
+   }
+}
+
