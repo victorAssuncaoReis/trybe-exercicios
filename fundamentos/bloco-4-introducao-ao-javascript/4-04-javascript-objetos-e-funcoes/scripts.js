@@ -1,10 +1,11 @@
-function palindromo(palavra) {
-    let reverse = palavra.split("").reverse().join("");
-    if (reverse === palavra) {
-        return true;
-    } else {
-        return false;
+
+function array(numeros) {
+    let indexMaior = 0;
+    for (let index in numeros) {
+        if (indexMaior < numeros[index]) {
+            indexMaior = numeros[index];
+        } 
     }
-    }
-    console.log(palindromo('arara'));
-    console.log(palindromo('vasco'));
+    return indexMaior;
+}
+console.log(array([2, 3, 6, 7, 10, 1]));
