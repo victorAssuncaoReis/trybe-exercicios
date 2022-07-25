@@ -12,3 +12,9 @@ let info = {
   info['recorrente'] = "Sim";
 
   console.log(info);
+
+  // Faça um for/in que mostre todas as chaves do objeto. Valor esperado no console:
+
+  for (let chaves in info) {
+    console.log(chaves);
+  }
