@@ -20,25 +20,17 @@
         </section>
       </main>
       <script>
-        //parte 2
+        // Remova todos os elementos filhos de paiDoPai exceto pai, elementoOndeVoceEsta e primeiroFilhoDoFilho.
         const pai = document.getElementById('pai');
-        const irmaoElementoOndeVoceEsta = document.createElement('section'); 
-        irmaoElementoOndeVoceEsta.id = 'irmaoElementoOndeVoceEsta';
-        pai.appendChild(irmaoElementoOndeVoceEsta);
+    for (let index = pai.childNodes.length - 1; index >= 0; index -= 1) {
+      const currentChildren = pai.childNodes[index];
+      if (currentChildren.id !== 'elementoOndeVoceEsta') {
+        currentChildren.remove();
+      }
+    }
 
-        //Crie um filho para elementoOndeVoceEsta.
-        const elementoOndeVoceEsta = document.getElementById('elementoOndeVoceEsta');
-        const filhoOndeVoceEsta = document.createElement('section');
-        filhoOndeVoceEsta.id = "filhoOndeVoceEsta";
-        elementoOndeVoceEsta.appendChild(filhoOndeVoceEsta);
-        //Crie um filho para primeiroFilhoDoFilho.
-        const primeiroFilhoDoFilho = document.getElementById('primeiroFilhoDoFilho'); // Recupere o elemento com o id `primeiroFilhoDoFilho`
-        const filhoPrimeiroFilhoDoFilho = document.createElement('section'); // Crie um novo elemento
-        filhoPrimeiroFilhoDoFilho.id = 'filhoPrimeiroFilhoDoFilho';
-        primeiroFilhoDoFilho.appendChild(filhoPrimeiroFilhoDoFilho);
-
-        //A partir desse filho criado, acesse terceiroFilho.
-        const terceiroFilho = filhoPrimeiroFilhoDoFilho.parentElement.parentElement.nextElementSibling;
+    const segundoEUltimoFilhoDoFilho = document.getElementById('segundoEUltimoFilhoDoFilho');
+    segundoEUltimoFilhoDoFilho.remove();
       </script>
 </body>
 </html>
