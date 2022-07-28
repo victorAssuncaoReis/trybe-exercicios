@@ -20,29 +20,25 @@
         </section>
       </main>
       <script>
-       const exercicio1 = document.getElementById('elementoOndeVoceEsta');
-       const exercicio2 = exercicio1.parentElement;
-       exercicio2.style.color = "green";
+        //parte 2
+        const pai = document.getElementById('pai');
+        const irmaoElementoOndeVoceEsta = document.createElement('section'); 
+        irmaoElementoOndeVoceEsta.id = 'irmaoElementoOndeVoceEsta';
+        pai.appendChild(irmaoElementoOndeVoceEsta);
 
-       //Acesse o primeiroFilhoDoFilho e adicione um texto a ele. Você se lembra dos vídeos da aula anterior, como fazer isso?
+        //Crie um filho para elementoOndeVoceEsta.
+        const elementoOndeVoceEsta = document.getElementById('elementoOndeVoceEsta');
+        const filhoOndeVoceEsta = document.createElement('section');
+        filhoOndeVoceEsta.id = "filhoOndeVoceEsta";
+        elementoOndeVoceEsta.appendChild(filhoOndeVoceEsta);
+        //Crie um filho para primeiroFilhoDoFilho.
+        const primeiroFilhoDoFilho = document.getElementById('primeiroFilhoDoFilho'); // Recupere o elemento com o id `primeiroFilhoDoFilho`
+        const filhoPrimeiroFilhoDoFilho = document.createElement('section'); // Crie um novo elemento
+        filhoPrimeiroFilhoDoFilho.id = 'filhoPrimeiroFilhoDoFilho';
+        primeiroFilhoDoFilho.appendChild(filhoPrimeiroFilhoDoFilho);
 
-       const exercicio3 = exercicio1.firstElementChild;
-       exercicio3.innerText = "Testando";
-
-       // Acesse o primeiroFilho a partir de pai.
-       const exercicio4 = exercicio2.firstElementChild;
-
-       //Agora acesse o primeiroFilho a partir de elementoOndeVoceEsta.
-       const exercicio5 = exercicio1.previousElementSibling;
-
-        //Agora acesse o texto Atenção! a partir de elementoOndeVoceEsta.
-        const exercicio6 = exercicio1.nextSibling;
-
-        //Agora acesse o terceiroFilho a partir de elementoOndeVoceEsta.
-        const exercicio7 = exercicio1.nextElementSibling;
-
-        //Agora acesse o terceiroFilho a partir de pai.
-        const exercicio8 = exercicio2.lastElementChild.previousElementSibling;
+        //A partir desse filho criado, acesse terceiroFilho.
+        const terceiroFilho = filhoPrimeiroFilhoDoFilho.parentElement.parentElement.nextElementSibling;
       </script>
 </body>
 </html>
