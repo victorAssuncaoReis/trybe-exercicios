@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="bootstrap-5.2.0-dist/css/bootstrap.min.css">
+    <script src="jquery-3.6.0.min.js"></script>
+    <script src="bootstrap-5.2.0-dist/js/bootstrap.min.js"></script>
+</head>
+<body class="bg-dark">
+    <header class="dropdown-header">
+        <h1 class="text-light">Formulário</h1>
+    </header>
+    <main>
+        <form>
+            <fieldset class="mx-auto text-light">
+                <label class="form-label text-light" for="nome-completo">Nome:</label>
+                <input class="form-control" type="text" id="nome-completo" minlength="10" maxlength="40" placeholder="Insira seu nome" required>
+                <br>
+                <label class="form-label text-light" for="inputEmail">Email:</label>
+                <input class="form-control" type="text" id="inputEmail" minlength="10" maxlength="50" placeholder="Insira seu e-mail" required>
+                <br>
+                <input class="form-check-label" type="radio" id="radio1" name="destinations" value="Cidade" required> Cidade
+                <input class="form-check-label" type="radio" id="radio2" name="destinations" value="Campo" required> Campo
+                <input class="form-check-label" type="radio" id="radio3" name="destinations" value="Praia" required> Praia
+                <input class="form-check-label" type="radio" id="radio4" name="destinations" value="Montanha" required> Montanha
+                <br>
+                <br>
+                <label class="form-label" for="whyWin">Por que você deveria ser a pessoa desenvolvedora a ganhar o concurso TrybeTrip?</label>
+                <br>
+                <textarea class="form-control" name="whyWin" id="text-area" cols="60" rows="10" maxlength="500" placeholder="Digite sua resposta vencedora aqui"></textarea>
+                <br>
+                <label class="form-label" for="dateInput">Qual a melhor data para realizar sua viagem?</label>
+                <input class="form-control"type="date" name="dateInput" id="dateInput">
+                <br>
+                <input type="checkbox" name="newsletter" id="newsletter">
+                <label class="form-label" for="newsletter">Gostaria de receber outras incríveis oportunidades oferecidas pela Trybe?</label>
+                <br>
+                <input type="checkbox" name="agreement" id="agreement" required>
+                <label class="form-label" for="agreement">Concordo que imagens das minhas férias poderão ser usadas na divulgação de concursos futuros.</label>
+            </fieldset>
+            <div id="buttonDiv">
+            <button class="btn-primary btn btn-light" type="submit" id="submit-btn">Enviar</button>
+            <button class="btn btn-primary btn-light" type="button" id="clear-btn">Limpar</button>
+            </div>
+        </form>
+    </main>
+    <br>
+    <footer class="text-center text-muted" >Página elaborada por Victor Henrique Assunção dos Reis, 2022</footer>
+    <script>
+function handleSubmit(event) {
+event.preventDefault();
+}
+ window.onload = function () {
+  const clearBtn = document.querySelector('#clear-btn');
+  clearBtn.addEventListener('click', clearFields);
+  const submitBtn = document.querySelector('#submit-btn');
+  submitBtn.addEventListener('click', handleSubmit);
+
+ function clearFields() {
+  const formElements = document.querySelectorAll('input');
+  const textArea = document.querySelector('textarea');
+  for (let index = 0; index < formElements.length; index += 1) {
+    const userInput = formElements[index];
+    userInput.value = '';
+    userInput.checked = false;
+  }
+  textArea.value = '';
+}
+};
+    </script>
+</body>
+</html>
