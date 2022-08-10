@@ -5,6 +5,29 @@ html {
   *, *:before, *:after {
     box-sizing: inherit;
   }
+@media screen and (max-width:600px) {
+    body {
+        background-color: blanchedalmond;
+    }
+    .headerClass {
+        background-color: aqua;
+        display: flex;
+        justify-content: center;
+        font-size: 1.2em;
+    }
+    .headerClass nav {
+        display: none;
+    }
+    .asides {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        font-size: 1.2em;
+    }
+    .main-content {
+        font-size: 1.2em;
+    }
+} 
 @media screen and (max-width: 999px) and (min-width:600px) {
     .headerClass {
         background-color: tan;
