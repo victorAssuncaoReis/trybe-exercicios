@@ -1,8 +1,16 @@
-const fatorial = (number) => {
-    let resultado = 1
-    for (index = 2; index <= number; index += 1) {
-        resultado *= index
+const maiorPalavra = (frase) => {
+    let tamanho = 0;
+    let resultado = '';
+    const array = frase.split(' ');
+    for (const index of array) {
+        if (index.length > tamanho) {
+            tamanho = index.length;
+            resultado = index;
+        }
     }
-    return resultado
+    return resultado;
 }
-console.log(`Esse é o fatorial ${fatorial(5)}`);
+console.log(maiorPalavra('Meu amigo é Duuloko'));
+
+
+
