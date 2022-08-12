@@ -1,16 +1,13 @@
-const maiorPalavra = (frase) => {
-    let tamanho = 0;
-    let resultado = '';
-    const array = frase.split(' ');
-    for (const index of array) {
-        if (index.length > tamanho) {
-            tamanho = index.length;
-            resultado = index;
-        }
-    }
-    return resultado;
+/* let cliques = 0;
+let botao = document.getElementById('botao');
+let contador = document.getElementById('contador');
+
+const funcao = () => {
+    cliques += 1;
+    contador.innerHTML = cliques;
 }
-console.log(maiorPalavra('Meu amigo é Duuloko'));
 
-
+botao.addEventListener('click', funcao); */
+let cliques = 0
+botao.addEventListener('click', () => contador.innerHTML = cliques +=1);
 
