@@ -25,4 +25,11 @@ const substituaX = (nome) => {
     array[1] = nome;
     return array.join(' ');
 }
-console.log(substituaX('Victor'));
+
+const minhasSkills = (const1) => {
+    const skills = ['HTML', 'CSS', 'JS'];
+    let retorno = `${const1} 
+Minhas três principais habilidades são ${skills}`;
+    return retorno
+}
+console.log(minhasSkills(substituaX('Victor')));
