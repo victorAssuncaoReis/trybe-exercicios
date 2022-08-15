@@ -1,55 +1,46 @@
-const order = {
-  name: 'Rafael Andrade',
-  phoneNumber: '11-98763-1416',
-  address: {
-    street: 'Rua das Flores',
-    number: '389',
-    apartment: '701',
-  },
-  order: {
-    pizza: {
-      marguerita: {
-        amount: 1,
-        price: 25,
-      },
-      pepperoni: {
-        amount: 1,
-        price: 20,
-      }
-    },
-    drinks: {
-      coke: {
-        type: 'Coca-Cola Zero',
-        price: 10,
-        amount: 1,
-      }
-    },
-    delivery: {
-      deliveryPerson: 'Ana Silveira',
-      price: 5,
-    }
-  },
-  payment: {
-    total: 60,
-  },
+const lesson1 = {
+  materia: 'Matemática',
+  numeroEstudantes: 20,
+  professor: 'Maria Clara',
+  turno: 'manhã',
 };
 
-/* console.log(order); */
-/* const customerInfo = (order) => {
-  const deliveryPerson = order.order.delivery.del
-  const Rua = order.address.street;
-  const numero = order.address.number;
-  const apartamento = order.address.apartment;
-  return console.log(`Olá ${deliveryPerson}, entrega para ${order.name}, telefone: ${order.phoneNumber}, ${Rua}, nº${numero}, Ap.${apartamento}.`)
-}
-customerInfo(order); */
+const lesson2 = {
+  materia: 'História',
+  numeroEstudantes: 20,
+  professor: 'Carlos',
+};
 
-const orderModifier = (order) => {
-  const cliente = order.name = 'Luiz Silva';
-  const valor = order.payment.total = '50';
-  const pizza = Object.keys(order.order.pizza);
-  const refri = order.order.drinks.coke.type;
-  return console.log(`Olá ${cliente}, o total do seu pedido de ${pizza[0]}, ${pizza[1]} e ${refri} é de R$${valor},00`);
+const lesson3 = {
+  materia: 'Matemática',
+  numeroEstudantes: 10,
+  professor: 'Maria Clara',
+  turno: 'noite',
+};
+const turno = (lesson2, turno, noite) => {
+  lesson2[turno] = noite;
 }
+turno(lesson2, 'turno', 'noite');
+console.log(lesson2);
 
-orderModifier(order);
+const keys = (objeto) => {
+  return console.log(Object.keys(objeto));
+}
+keys(lesson1);
+
+const tamanho = (objeto) => {
+  return console.log(Object.keys(objeto).length);
+}
+tamanho(lesson3);
+
+const allLessons = Object.assign({}, {lesson1, lesson2, lesson3});
+console.log(allLessons);
+
+const getStudentNumber = (obj) => {
+  const aula1 = parseInt(obj.lesson1.numeroEstudantes);
+  const aula2 = parseInt(obj.lesson2.numeroEstudantes);
+  const aula3 = parseInt(obj.lesson3.numeroEstudantes);
+  const total = aula1 + aula2 + aula3;
+  return console.log(`O número total de estudantes é ${total}.`)
+}
+getStudentNumber(allLessons);
