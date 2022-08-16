@@ -1,13 +1,19 @@
-const myRemove = require('./sum.js');
+const myFizzBuzz = require('./sum.js');
 
-describe('Exercício de testes do array', () => {
-  test('Verifica se retorna o array esperado sem o número do parametro', () => {
-    expect(myRemove([1, 2, 3, 4], 3)).toEqual([1, 2, 4]);
+describe('testa a função myFizzBuzz', () => {
+  it('verifica, se de acordo com o parâmetro recebido, retorna o valor esperado', () => {
+    expect(myFizzBuzz(15)).toBe('fizzbuzz');
   });
-  test('Verifique se a chamada myRemove([1, 2, 3, 4], 3) não retorna o array [1, 2, 3, 4]', () => {
-    expect(myRemove([1, 2, 3, 4], 3)).not.toEqual([1, 2,3, 4]);
+  it('Faça uma chamada com um número divisível por 3 e verifique se o retorno é o esperado', () => {
+    expect(myFizzBuzz(3)).toBe('fizz');
   });
-  test('Verifique se a chamada myRemove([1, 2, 3, 4], 5) retorna o array esperado', () => {
-    expect(myRemove([1, 2, 3, 4], 5)).toEqual([1, 2,3, 4]);
+  it('Faça uma chamada com um número divisível por 5 e verifique se o retorno é o esperado', () => {
+    expect(myFizzBuzz(5)).toBe('buzz');
+  });
+  it('Faça uma chamada com um número que não é divisível por 3 ou 5 e verifique se o retorno é o esperado', () => {
+    expect(myFizzBuzz(2)).toBe(2);
+  });
+  it('Faça uma chamada com um parâmetro que não é um número e verifique se o retorno é o esperado', () => {
+    expect(myFizzBuzz('2')).toBe(false);
   });
 })
