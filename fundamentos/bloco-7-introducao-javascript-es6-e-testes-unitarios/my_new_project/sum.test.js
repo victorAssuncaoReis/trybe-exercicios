@@ -1,16 +1,13 @@
-const sum = require('./sum.js');
+const myRemove = require('./sum.js');
 
-describe('Função de soma', () => {
-  test('Teste se a função soma 4 e 5 com resultado 9', () => {
-    expect(sum(4, 5)).toBe(9);
+describe('Exercício de testes do array', () => {
+  test('Verifica se retorna o array esperado sem o número do parametro', () => {
+    expect(myRemove([1, 2, 3, 4], 3)).toEqual([1, 2, 4]);
   });
-  test('Testa se a soma com os parâmetros 0 e 0 tem resultado 0', () => {
-    expect(sum(0, 0)).toBe(0);
+  test('Verifique se a chamada myRemove([1, 2, 3, 4], 3) não retorna o array [1, 2, 3, 4]', () => {
+    expect(myRemove([1, 2, 3, 4], 3)).not.toEqual([1, 2,3, 4]);
   });
-  test('Testa se a função retorna um erro se os parâmetros conterem uma ou mais strings', () => {
-    expect(() => sum(4, '5')).toThrowError();
+  test('Verifique se a chamada myRemove([1, 2, 3, 4], 5) retorna o array esperado', () => {
+    expect(myRemove([1, 2, 3, 4], 5)).toEqual([1, 2,3, 4]);
   });
-  test('Testa se o texto do error é o esperado', () => {
-    expect(() => sum(4, '5')).toThrowError('parameters must be numbers');
-  });
-});
+})

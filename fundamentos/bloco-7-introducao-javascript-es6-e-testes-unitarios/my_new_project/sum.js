@@ -1,10 +1,12 @@
-function sum(a, b) {
-  if (typeof a !== 'number' || typeof b !== 'number') {
-    throw new Error('parameters must be numbers');
+function myRemove(arr, item) {
+  let newArr = [];
+  for (let index = 0; index < arr.length; index += 1) {
+    if (item !== arr[index]) {
+      newArr.push(arr[index]);
+    }
   }
-
-  return a + b;
+  return newArr;
 }
 
-
-module.exports = sum;
+module.exports = myRemove;
+// implemente seus testes aqui
