@@ -1,9 +1,10 @@
-const acordar = () => 'Acordando!!';
-const cafe = () => 'Bora tomar café';
-const dormir = () => 'Partiu dormir!';
+const checagem = (numero, aleatorio) => numero === aleatorio;
 
-const doingThings = (func) => console.log(func());
+const sorteio = (numero, callback) => {
+  const aleatorio = Math.round(Math.random() *5);
+  return callback(numero, aleatorio) ? 'Parabéns você ganhou' : 'Tente novamente';
+}
 
-doingThings(acordar);
-doingThings(cafe);
-doingThings(dormir);
+console.log(sorteio(3, checagem));
+
+
