@@ -1,27 +1,22 @@
-const numbers = [19, 21, 30, 3, 45, 22, 15];
+const names = ['Mateus', 'José', 'Ana', 'Cláudia', 'Bruna', 'Antedeguemon'];
 
-const findDivisibleBy3And5 = () => {
-  return numbers.find((number) => number % 3 === 0 && number % 5 === 0);
-};
-
-console.log(findDivisibleBy3And5());
-
-const names = ['João', 'Irene', 'Fernando', 'Maria'];
-
-const findNameWithFiveLetters = () => {
-  return names.find((nome) => nome.length === 5);
+const hasName = (arr, name) => {
+  return arr.some((nomes) => nomes === name);
 }
 
-console.log(findNameWithFiveLetters());
+console.log(hasName(names, 'Ana'));
+console.log(hasName(names, 'Antedeguemon'));
 
-const musicas = [
-  { id: '31031685', title: 'Partita in C moll BWV 997' },
-  { id: '31031686', title: 'Toccata and Fugue, BWV 565' },
-  { id: '31031687', title: 'Chaconne, Partita No. 2 BWV 1004' },
-]
+const people = [
+  { name: 'Mateus', age: 18 },
+  { name: 'José', age: 19 },
+  { name: 'Ana', age: 23 },
+  { name: 'Cláudia', age: 20 },
+  { name: 'Bruna', age: 19 },
+];
 
-function findMusic(id) {
-  return musicas.find((objetos) => objetos.id === id);
+const verifyAges = (arr, minimumAge) => {
+  return arr.every((idades) => idades.age >= minimumAge);
 }
 
-console.log(findMusic('31031686'))
+console.log(verifyAges(people, 18));
