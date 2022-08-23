@@ -61,15 +61,25 @@ const books = [
   },
 ];
 
-const expectedResult = [
-  'O Senhor dos Anéis',
-  'Fundação',
-  'O Chamado de Cthulhu',
-];
+/* const expectedResult = 'O Senhor dos Anéis';
 
-function oldBooks() {
- const thisYear = new Date().getFullYear();
- return books.filter((book) => thisYear - book.releaseYear > 60).map((book) => book.name);
-};
-console.log(oldBooks());
-//🚀 6 - Crie um array com o nome de todos os livros com mais de 60 anos de publicação.
+function authorWith3DotsOnName() {
+  return books.filter((book) => (
+    book.author.name[1] === '.'
+    && book.author.name[4] === '.'
+    && book.author.name[7] === '.'
+  ))[0].name;
+}
+console.log(authorWith3DotsOnName()); */
+//🚀 7 - Encontre o nome do livro escrito pela pessoa cujo nome registrado começa com três iniciais.
+//Dica: cada inicial termina com um ponto.
+
+const expectedResult = 'O Senhor dos Anéis';
+
+function authorWith3DotsOnName() {
+  return books.find((book) => (
+    console.log(book.author.name.split(' ')
+      .filter((word) => word.endsWith('.')).length === 3
+  ))).name;
+}
+authorWith3DotsOnName();
