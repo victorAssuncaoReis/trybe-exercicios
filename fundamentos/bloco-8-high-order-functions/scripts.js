@@ -61,13 +61,15 @@ const books = [
   },
 ];
 
-// Adicione o código do exercício aqui:
+const expectedResult = [
+  'O Senhor dos Anéis',
+  'Fundação',
+  'O Chamado de Cthulhu',
+];
 
-function fantasyOrScienceFictionAuthors() {
-  const wantedGenres = ['Fantasia', 'Ficção Científica'];
-  return books
-    .filter((book) => wantedGenres.includes(book.genre))
-    .map((book) => book.author.name).sort();
+function oldBooks() {
+ const thisYear = new Date().getFullYear();
+ return books.filter((book) => thisYear - book.releaseYear > 60).map((book) => book.name);
 };
-console.log(fantasyOrScienceFictionAuthors());
-//Crie um array em ordem alfabética apenas com os nomes de todas as pessoas autoras de ficção científica ou fantasia.
+console.log(oldBooks());
+//🚀 6 - Crie um array com o nome de todos os livros com mais de 60 anos de publicação.
