@@ -1,9 +1,11 @@
-const myList = [5, 2, 3];
+const palio = ['Palio', 'Fiat', 2019];
+const shelbyCobra = ['Shelby Cobra', 'Ford', 1963];
+const chiron = ['Chiron', 'Bugatti', 2016];
 
-// escreva swap abaixo
-const swap = ([el1, el2, el3]) => ([el3, el2, el1]);
-console.log(swap(myList));
-/* 5 - Escreva a função swap, que dado um array de 3 elementos, retorna um novo array com o primeiro e terceiro elementos trocados. Detalhe: você precisa fazer essa função gastando somente 1 linha. O retorno da função utilizando o array myList deve ser [3, 2, 5].
-Dica: use array destructuring.
+// escreva toObject abaixo
+const toObject = ([carro, marca, ano]) => ({carro, marca, ano});
+
+console.log(toObject(palio));
+/* 6 - Suponha que você esteja lidando com carros e, da forma como o problema lhe foi entregue, cada carro é representado dentro de um array. Então seu chefe pede que seja mudado o formato de array para objeto. Crie uma função toObject que, dada uma lista, retorna um objeto representando o carro:
+Dica: use array destructuring e abbreviation object literal.
  */
-
