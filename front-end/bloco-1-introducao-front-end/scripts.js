@@ -1,44 +1,11 @@
-const pokemons = [
-  {
-    name: 'Bulbasaur',
-    type: 'Grama',
-    ability: 'Raio Solar',
-  },
-  {
-    name: 'Charmander',
-    type: 'Fogo',
-    ability: 'Lança Chamas',
-  },
-  {
-    name: 'Squirtle',
-    type: 'Água',
-    ability: 'Jato de Água',
-  },
-];
+beforeEach(() => console.log('1 - beforeEach'));
+afterEach(() => console.log('1 - afterEach'));
 
-function getPokemonDetails(selectedPokemon, callback) {
-  const foundPokemon = pokemons.find((pokemon) => pokemon.name === selectedPokemon);
+test('', () => console.log('1 - test'));
 
-  setTimeout(() => {
-    if (foundPokemon === undefined) {
-      return callback(new Error('Não temos esse pokémon para você :('), null);
-    }
+describe('Scoped / Nested block', () => {
+  beforeEach(() => console.log('2 - beforeEach'));
+  afterEach(() => console.log('2 - afterEach'));
 
-    const { name, type, ability } = foundPokemon;
-
-    const messageFromProfOak = `Olá, seu pokémon é o ${name}, o tipo dele é ${type} e a habilidade principal dele é ${ability}`;
-
-    callback(null, messageFromProfOak);
-  }, 2000);
-}
-
-const handlePokemonSearch = (error, message) => {
-  // Implemente a callback de tratamento de erro
-  if (error) {
-    console.log(error);
-  } else {
-    console.log(message);
-  }
-};
-
-getPokemonDetails('Digimon', handlePokemonSearch);
+  test('', () => console.log('2 - test'));
+});
